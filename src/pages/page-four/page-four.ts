@@ -15,12 +15,13 @@ import { NavController, NavParams } from 'ionic-angular';
 export class PageFourPage {
 
   public data = {}
+  public finalOutput :string
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.data = navParams.get("data")
 
     if(this.data["plants become die"] && this.data["seedlings are killed just before they reach the soil surface"] && this.data["Seedlings topple over collapse"] && this.data["Collar of the seedlings are soft and water soaked."]){
-      console.log("Worked!!!")
+      this.finalOutput = "Damping off"
     }
   }
 
