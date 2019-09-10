@@ -1,5 +1,7 @@
 {
   "name": "potato",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

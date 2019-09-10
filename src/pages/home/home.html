@@ -1,12 +1,12 @@
-<ion-header>
-  <ion-navbar>
+<ion-header translucent>
+  <ion-navbar color="primary">
     <ion-title>
       Select Part
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding color="light">
   <ion-card>
     <ion-card-header>
       <ion-card-title>Select affected parts</ion-card-title>
@@ -20,10 +20,30 @@
       </form>
     </ion-card-content>
 
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <section class="full-width">
+            <button ion-button shape="round" fill="outline" (click)="itemTapped()">Next</button>
+          </section>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+
   </ion-card>
+  <!-- <ion-item>
+    <ion-button  ion-item (click)="itemTapped()" size="small" color="tertiary">
+      Next
+    </ion-button >
+  </ion-item> -->
 
-  <button ion-item (click)="itemTapped()" color="primary" size="small">
 
-    Next
-  </button>
+
+
+
+  <!-- <ion-button color="primary" (click)="itemTapped()">Primary</ion-button> -->
+
 </ion-content>

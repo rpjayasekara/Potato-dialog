@@ -4,8 +4,8 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
-  <ion-navbar>
+<ion-header translucent>
+  <ion-navbar color="primary"> 
     <ion-title>page-three</ion-title>
   </ion-navbar>
 </ion-header>
@@ -15,17 +15,23 @@
 
 
   <form [formGroup]="property_form">
-    <ion-card *ngIf="parts.Leaves">
+    <ion-card *ngIf="parts.Leaves" color="light">
       <ion-card-header>
         <ion-card-title>Leaves</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of leave_form">
-        <ion-card *ngIf="part.isLeave" >
+        <ion-card *ngIf="part.isLeave">
           <ion-card-header>
-            <ion-card-title>{{part.name}}</ion-card-title>
+            <ion-card-title>
+              <p>
+                {{part.name}}
+              </p>
+            </ion-card-title>
           </ion-card-header>
           <ion-item *ngFor="let color of part.data">
-            <ion-label>{{color}}</ion-label>
+            <ion-label text-wrap>
+              {{color}}
+            </ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
         </ion-card>
@@ -34,12 +40,12 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Fruits">
+    <ion-card *ngIf="parts.Fruits" color="light">
       <ion-card-header>
         <ion-card-title>Fruits</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of fruits_form">
-        <ion-card *ngIf="part.isFruit" >
+        <ion-card *ngIf="part.isFruit">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
@@ -53,12 +59,12 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Stem">
+    <ion-card *ngIf="parts.Stem" color="light">
       <ion-card-header>
         <ion-card-title>Stem</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of stem_form">
-        <ion-card *ngIf="part.isStem" >
+        <ion-card *ngIf="part.isStem">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
@@ -72,12 +78,12 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Roots">
+    <ion-card *ngIf="parts.Roots" color="light">
       <ion-card-header>
         <ion-card-title>Root</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of roots_form">
-        <ion-card *ngIf="part.isRoot" >
+        <ion-card *ngIf="part.isRoot">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
@@ -91,12 +97,12 @@
 
     </ion-card>
 
-    <ion-card *ngIf="isPlant">
+    <ion-card *ngIf="isPlant" color="light">
       <ion-card-header>
         <ion-card-title>Whole Plant</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of plant_form">
-        <ion-card *ngIf="part.isPlant" >
+        <ion-card *ngIf="part.isPlant">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
