@@ -1,14 +1,29 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Select Part
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Select affected parts</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="partsForm">
+        <ion-item *ngFor="let part of parts">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+
+  </ion-card>
+
+  <button ion-item (click)="itemTapped()" color="primary" size="small">
+
+    Next
+  </button>
 </ion-content>

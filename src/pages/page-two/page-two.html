@@ -1,0 +1,92 @@
+<!--
+  Generated template for the PageTwoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>page-two</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-card *ngIf="isLeaves">
+    <ion-card-header>
+      <ion-card-title>Leaves</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="leaveForm">
+        <ion-item *ngFor="let part of leaves">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isFruits">
+    <ion-card-header>
+      <ion-card-title>Fruits</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="fruitForm">
+        <ion-item *ngFor="let part of fruits">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isStem">
+    <ion-card-header>
+      <ion-card-title>Stem</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="stemForm">
+        <ion-item *ngFor="let part of stem">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isRoot">
+    <ion-card-header>
+      <ion-card-title>Roots</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="rootForm">
+        <ion-item *ngFor="let part of root">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="isPlant">
+    <ion-card-header>
+      <ion-card-title>Whole plant</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="plantForm">
+        <ion-item *ngFor="let part of plant">
+          <ion-label>{{part}}</ion-label>
+          <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
+        </ion-item>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-item (click)="itemTapped()" color="primary" size="small">
+
+    Next
+  </button>
+
+
+
+</ion-content>
