@@ -6,15 +6,21 @@
 -->
 <ion-header translucent>
   <ion-navbar color="primary">
-    <ion-title>page-four</ion-title>
+    <ion-title>Results</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>{{finalOutput}}</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+  <ion-list>
+    <ion-list-header>
+      Results
+    </ion-list-header>
+    <ion-item *ngFor="let output of output">
+      <ion-label>
+        <h2>{{output.name}}</h2>
+        <h3>{{output.precentage}}%</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

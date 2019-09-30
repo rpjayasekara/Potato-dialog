@@ -60,6 +60,7 @@ export class PageFourPage {
   public precentages = []
   public di_precentages = {}
   public names = ["Damping off", "Fusarium wilt", "Early blight", " Bacteria wilt", "Bacterial Leaf spot", "Tomato moassaic virus", "Leaf curl virus", "Spotted wilt", " Gray Mould", " Bacterial soft rot and hollow stem", "Phoma Rot", "Anthracnose", "Downy mildew", "Canker disease", "Bunchi top ", "powdery mildew", "White mold", "late blight", "Septorial leaf spot", "Nitrogen", "phophoros", "potassium", "sulphur", "magnisium", "manganese", "molybdinum", "zinc", "boron", "calcium", "copper", "iron", "iron", "whitefly", "leaf miner", "thrips", "mite", "blister beetle", "nematodes"]
+  public output = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.data = navParams.get("data")
@@ -100,12 +101,22 @@ export class PageFourPage {
 
       }
       this.precentages.push((this.temp/this.deseaes[i].length)*100)
-      this.di_precentages[i]=this.names[i]
+      this.di_precentages[(this.temp/this.deseaes[i].length)*100]=this.names[i]
+      this.precentages = this.precentages.sort((a, b) => b - a)
       console.log(this.temp)
     }
     console.log(this.symptoms)
     console.log(this.di_precentages)
     console.log(this.precentages)
+
+    for(let i=0; i<3; i++){
+      let result = {}
+      result["name"] = this.di_precentages[this.precentages[i]]
+      result["precentage"] = Math.round(this.precentages[i] * 100) / 100
+      this.output.push(result)
+    }
+
+    console.log(this.output)
 
   }
 

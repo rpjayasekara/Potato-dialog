@@ -6,7 +6,7 @@
 -->
 <ion-header translucent>
   <ion-navbar color="primary"> 
-    <ion-title>page-three</ion-title>
+    <!-- <ion-title>page-three</ion-title> -->
   </ion-navbar>
 </ion-header>
 
@@ -50,7 +50,7 @@
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
           <ion-item *ngFor="let color of part.data">
-            <ion-label>{{color}}</ion-label>
+            <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
         </ion-card>
@@ -69,7 +69,7 @@
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
           <ion-item *ngFor="let color of part.data">
-            <ion-label>{{color}}</ion-label>
+            <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
         </ion-card>
@@ -88,7 +88,7 @@
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
           <ion-item *ngFor="let color of part.data">
-            <ion-label>{{color}}</ion-label>
+            <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
         </ion-card>
@@ -107,7 +107,7 @@
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
           <ion-item *ngFor="let color of part.data">
-            <ion-label>{{color}}</ion-label>
+            <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
         </ion-card>
@@ -117,10 +117,15 @@
     </ion-card>
   </form>
 
-  <button ion-item (click)="itemTapped()" color="primary" size="small">
-
-    Next
-  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <section class="full-width">
+          <button ion-button shape="round" fill="outline" (click)="itemTapped()">Next</button>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 

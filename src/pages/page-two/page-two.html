@@ -6,7 +6,7 @@
 -->
 <ion-header translucent>
   <ion-navbar color="primary">
-    <ion-title>page-two</ion-title>
+    <!-- <ion-title>page-two</ion-title> -->
   </ion-navbar>
 </ion-header>
 
@@ -19,7 +19,7 @@
     <ion-card-content>
       <form [formGroup]="leaveForm">
         <ion-item *ngFor="let part of leaves">
-          <ion-label>{{part}}</ion-label>
+          <ion-label text-wrap>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item>
       </form>
@@ -33,7 +33,7 @@
     <ion-card-content>
       <form [formGroup]="fruitForm">
         <ion-item *ngFor="let part of fruits">
-          <ion-label>{{part}}</ion-label>
+          <ion-label text-wrap>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item>
       </form>
@@ -47,7 +47,7 @@
     <ion-card-content>
       <form [formGroup]="stemForm">
         <ion-item *ngFor="let part of stem">
-          <ion-label>{{part}}</ion-label>
+          <ion-label text-wrap>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item>
       </form>
@@ -61,7 +61,7 @@
     <ion-card-content>
       <form [formGroup]="rootForm">
         <ion-item *ngFor="let part of root">
-          <ion-label>{{part}}</ion-label>
+          <ion-label text-wrap>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item>
       </form>
@@ -75,17 +75,22 @@
     <ion-card-content>
       <form [formGroup]="plantForm">
         <ion-item *ngFor="let part of plant">
-          <ion-label>{{part}}</ion-label>
+          <ion-label text-wrap>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item>
       </form>
     </ion-card-content>
   </ion-card>
 
-  <button ion-item (click)="itemTapped()" color="primary" size="small">
-
-    Next
-  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col text-center>
+        <section class="full-width">
+          <button ion-button shape="round" fill="outline" (click)="itemTapped()">Next</button>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 
