@@ -61,7 +61,7 @@ export class PageThreePage {
 
   public stems = ["distortion", "nodes", "cracking", "collapse", "rotting", "lessions"]
   public stem_form = []
-  public stem_distortion = ["Collar of the seedlings are soft and water soaked.", "purplish stems", "Inner stem are brown, slimy, disintegrates and becomes hollow", "Girdling the plant near the soil line"]
+  public stem_distortion = ["Collar of the seedlings are soft and water soaked.", "purplish stems", "Girdling the plant near the soil line"]
   public stem_nodes = ["nodes and internodes are significantly reduced in size","Enlargement of nodes of the stem "]
   public stem_cracking = ["stem cracking"]
   public stem_collapse = ["Seedlings topple over collapse"]
@@ -170,6 +170,8 @@ export class PageThreePage {
     this.navCtrl.push(PageFourPage, {
       data:this.property_form.value
     });
+    console.log()
+
   }
 
 }
