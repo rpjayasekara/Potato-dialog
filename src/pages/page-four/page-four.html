@@ -6,16 +6,23 @@
 -->
 <ion-header translucent>
   <ion-navbar color="primary">
-    <ion-title>Results</ion-title>
+    <ion-title>
+      Results
+    </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-list>
-    <ion-list-header>
-      Results
-    </ion-list-header>
-    <ion-item *ngFor="let output of output">
+<ion-content padding class="masters">
+  <ion-list class="cardconteudo">
+    <!-- <ion-list-header class="cardconteudo">
+      <h1>
+        Results
+      </h1>
+    </ion-list-header> -->
+    <h1>
+      Here are the results
+    </h1>
+    <ion-item *ngFor="let output of output" class="cardconteudo">
       <ion-label>
         <h2>{{output.name}}</h2>
         <h3>{{output.precentage}}%</h3>

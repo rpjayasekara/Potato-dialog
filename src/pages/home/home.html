@@ -6,20 +6,20 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding color="light">
-  <ion-card>
+<ion-content padding color="light" class="masters">
+  <ion-card class="cardconteudo">
     <ion-card-header>
       <ion-card-title>Select affected parts</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <form [formGroup]="partsForm">
+    <ion-card-content class="cardconteudo">
+      <form [formGroup]="partsForm" class="cardconteudo">
         <!-- <ion-item *ngFor="let part of parts">
           <ion-label>{{part}}</ion-label>
           <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>
         </ion-item> -->
 
         <ion-list>
-          <ion-item *ngFor="let part of parts">
+          <ion-item *ngFor="let part of parts" class="cardconteudo">
 
             <ion-label>{{part}}</ion-label>
             <ion-checkbox slot="end" formControlName="{{part}}"></ion-checkbox>

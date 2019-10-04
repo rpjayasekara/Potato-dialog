@@ -10,17 +10,17 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="masters">
 
 
 
   <form [formGroup]="property_form">
-    <ion-card *ngIf="parts.Leaves" color="light">
+    <ion-card *ngIf="parts.Leaves" class="cardconteudo">
       <ion-card-header>
         <ion-card-title>Leaves</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of leave_form">
-        <ion-card *ngIf="part.isLeave">
+        <ion-card *ngIf="part.isLeave" class="cardconteudo">
           <ion-card-header>
             <ion-card-title>
               <p>
@@ -28,7 +28,7 @@
               </p>
             </ion-card-title>
           </ion-card-header>
-          <ion-item *ngFor="let color of part.data">
+          <ion-item *ngFor="let color of part.data" class="cardconteudo">
             <ion-label text-wrap>
               {{color}}
             </ion-label>
@@ -40,16 +40,16 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Fruits" color="light">
+    <ion-card *ngIf="parts.Fruits" color="light" class="cardconteudo">
       <ion-card-header>
         <ion-card-title>Fruits</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of fruits_form">
-        <ion-card *ngIf="part.isFruit">
+        <ion-card *ngIf="part.isFruit" class="cardconteudo">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
-          <ion-item *ngFor="let color of part.data">
+          <ion-item *ngFor="let color of part.data" class="cardconteudo">
             <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
@@ -59,16 +59,16 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Stem" color="light">
+    <ion-card *ngIf="parts.Stem" color="light" class="cardconteudo">
       <ion-card-header>
         <ion-card-title>Stem</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of stem_form">
-        <ion-card *ngIf="part.isStem">
+        <ion-card *ngIf="part.isStem" class="cardconteudo">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
-          <ion-item *ngFor="let color of part.data">
+          <ion-item *ngFor="let color of part.data" class="cardconteudo">
             <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
@@ -78,16 +78,16 @@
 
     </ion-card>
 
-    <ion-card *ngIf="parts.Roots" color="light">
+    <ion-card *ngIf="parts.Roots" color="light" class="cardconteudo">
       <ion-card-header>
         <ion-card-title>Root</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of roots_form">
-        <ion-card *ngIf="part.isRoot">
+        <ion-card *ngIf="part.isRoot" class="cardconteudo">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
-          <ion-item *ngFor="let color of part.data">
+          <ion-item *ngFor="let color of part.data" class="cardconteudo">
             <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
@@ -97,16 +97,16 @@
 
     </ion-card>
 
-    <ion-card *ngIf="isPlant" color="light">
+    <ion-card *ngIf="isPlant" color="light" class="cardconteudo">
       <ion-card-header>
         <ion-card-title>Whole Plant</ion-card-title>
       </ion-card-header>
       <div *ngFor="let part of plant_form">
-        <ion-card *ngIf="part.isPlant">
+        <ion-card *ngIf="part.isPlant" class="cardconteudo">
           <ion-card-header>
             <ion-card-title>{{part.name}}</ion-card-title>
           </ion-card-header>
-          <ion-item *ngFor="let color of part.data">
+          <ion-item *ngFor="let color of part.data" class="cardconteudo">
             <ion-label text-wrap>{{color}}</ion-label>
             <ion-checkbox formControlName="{{color}}"></ion-checkbox>
           </ion-item>
