@@ -5,7 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
+  styleUrls: ['/app.scss']
 })
 export class MyApp {
   rootPage:any = HomePage;
